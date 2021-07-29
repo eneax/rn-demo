@@ -17,18 +17,24 @@ const ListScreen = () => {
 
   return (
     <FlatList
+      horizontal
+      showsHorizontalScrollIndicator={false}
       keyExtractor={(friend) => friend.name}
       data={friends}
       renderItem={({ item }) => (
         <View>
-          <Text>{item.name}</Text>
+          <Text style={styles.textStyle}>{item.name}</Text>
         </View>
       )}
     />
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  textStyle: {
+    marginVertical: 50,
+  },
+})
 
 export default ListScreen
 
@@ -36,8 +42,12 @@ export default ListScreen
 ! FlatList
 
 - 2 required props: data and renderItem
-- data: the array of data that we are going to create a bunch of elements out of
-- renderItem: function that will turn each individual item into an element
-- keyExtractor: returns a unique string as a key for every element
+  - data: the array of data that we are going to create a bunch of elements out of
+  - renderItem: function that will turn each individual item into an element
+
+- extra props:
+  - keyExtractor: returns a unique string as a key for every element
+  - horizontal: if true, renders items next to each other horizontally instead of stacked vertically
+  - showsHorizontalScrollIndicator: When true, shows a horizontal scroll
 
 */

@@ -1,7 +1,7 @@
 {
-  "name": "rn-starter",
+  "name": "rn-demo",
   "version": "1.0.0",
-  "description": "Basic React Native Starter",
+  "description": "React Native demo",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eneax/rn-starter.git"
+    "url": "git+https://github.com/eneax/rn-demo.git"
   },
   "keywords": [
     "react-native"
@@ -38,7 +38,7 @@
   "author": "Enea Xharja",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eneax/rn-starter/issues"
+    "url": "https://github.com/eneax/rn-demo/issues"
   },
-  "homepage": "https://github.com/eneax/rn-starter#readme"
+  "homepage": "https://github.com/eneax/rn-demo#readme"
 }

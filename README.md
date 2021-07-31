@@ -1,2 +1,3 @@
-# rn-starter
-React Native Starter
+# rn-demo
+
+React Native demo

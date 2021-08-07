@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'black',
     height: 200,
-    alignItems: 'center',
   },
   textOneStyle: {
     borderWidth: 3,
@@ -25,8 +24,9 @@ const styles = StyleSheet.create({
   textTwoStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    position: 'absolute',
     fontSize: 18,
+    top: 10,
+    left: 10,
   },
   textThreeStyle: {
     borderWidth: 3,

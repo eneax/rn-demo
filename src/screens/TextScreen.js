@@ -1,11 +1,12 @@
 import React from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { View, Text, TextInput, StyleSheet, ScrollView } from 'react-native'
 
 const TextScreen = () => {
   const [name, setName] = React.useState('')
+  const [password, setPassword] = React.useState('')
 
   return (
-    <View>
+    <ScrollView>
       <Text style={styles.text}>Enter name:</Text>
       <TextInput
         style={styles.input}
@@ -15,7 +16,21 @@ const TextScreen = () => {
         onChangeText={(newValue) => setName(newValue)}
       />
       <Text style={styles.text}>My name is {name}</Text>
-    </View>
+
+      <Text style={styles.text}>Enter password:</Text>
+      <TextInput
+        style={styles.input}
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={password}
+        onChangeText={(newValue) => setPassword(newValue)}
+      />
+      {password.length < 4 ? (
+        <Text style={styles.errorText}>
+          Password must be longer than 5 characters!!!
+        </Text>
+      ) : null}
+    </ScrollView>
   )
 }
 
@@ -28,6 +43,11 @@ const styles = StyleSheet.create({
   },
   text: {
     margin: 15,
+  },
+  errorText: {
+    margin: 15,
+    color: 'red',
+    fontWeight: 'bold',
   },
 })
 
